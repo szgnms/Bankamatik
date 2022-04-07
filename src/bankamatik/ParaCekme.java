@@ -2,7 +2,7 @@ package bankamatik;
 
 import java.util.Scanner;
 
-import static bankamatik.Bankamatik.bankamtik;
+import static bankamatik.Bankamatik.bankamatik;
 
 public class ParaCekme {
     public static final String W = "\u001B[37m";
@@ -22,16 +22,12 @@ public class ParaCekme {
             System.out.print(G + "SECIMINIZ  : ");
             String bislem = scan.next();
             switch (bislem) {
-                case "1":
-                    bankamtik();
-                    break;
-                case "2":
-                    System.out.println(G + "BIZI TERCIH ETTIGINIZ ICIN TESEKKUR EDERIZ");
-                    break;
-                default:
+                case "1" -> bankamatik();
+                case "2" -> System.out.println(G + "BIZI TERCIH ETTIGINIZ ICIN TESEKKUR EDERIZ");
+                default -> {
                     System.out.println(G + "*******YANLIS GIRIS YAPTINIZ*******");
                     paraCekme();
-                    break;
+                }
             }
         } else {
             System.out.println(W + "BAKIYE  :" + bakiye);
@@ -53,16 +49,12 @@ public class ParaCekme {
                 System.out.print(G + "SECIMINIZ  : ");
                 String cislem = scan.next();
                 switch (cislem) {
-                    case "1":
-                        bankamtik();
-                        break;
-                    case "2":
-                        System.out.println(G + "BIZI TERCIH ETTIGINIZ ICIN TESEKKUR EDERIZ");
-                        break;
-
-                    default:
+                    case "1" -> bankamatik();
+                    case "2" -> System.out.println(G + "BIZI TERCIH ETTIGINIZ ICIN TESEKKUR EDERIZ");
+                    default -> {
                         System.out.println(G + "*******YANLIS GIRIS YAPTINIZ*******");
-                        bankamtik();
+                        bankamatik();
+                    }
                 }
 
             }

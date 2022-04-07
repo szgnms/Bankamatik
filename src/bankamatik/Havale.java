@@ -1,6 +1,6 @@
 package bankamatik;
 
-import static bankamatik.Bankamatik.bankamtik;
+import static bankamatik.Bankamatik.bankamatik;
 import static bankamatik.ParaCekme.*;
 import static bankamatik.ParaCekme.G;
 
@@ -15,16 +15,12 @@ public class Havale {
             System.out.print(G + "SECIMINIZ  : ");
             String bislem = scan.next();
             switch (bislem) {
-                case "1":
-                    bankamtik();
-                    break;
-                case "2":
-                    System.out.println(G + "BIZI TERCIH ETTIGINIZ ICIN TESEKKUR EDERIZ");
-                    break;
-                default:
+                case "1" -> bankamatik();
+                case "2" -> System.out.println(G + "BIZI TERCIH ETTIGINIZ ICIN TESEKKUR EDERIZ");
+                default -> {
                     System.out.println(G + "*******YANLIS GIRIS YAPTINIZ*******");
                     havale();
-                    break;
+                }
             }
         } else {
 
@@ -45,7 +41,7 @@ public class Havale {
             System.out.println(G + " ALICI IBAN GIRINIZ : ");
             System.out.print("IBAN  :");
             String iban = scan.next();
-            System.out.println("TR"+iban + "  NOLU IBAN`A " + yislem + "TUTARINDA PARA GONDERILMISTIR");
+            System.out.println("TR"+iban + "  NOLU IBAN`A " + yislem + " TL TUTARINDA PARA GONDERILMISTIR");
 
 
             bakiye = bakiye - yislem;
@@ -53,18 +49,14 @@ public class Havale {
             System.out.println(" 1 -> ANA MENU \n 2 -> CIKIS");
             System.out.print(G + "SECIMINIZ  : ");
             String hislem = scan.next();
-            switch (hislem) {
-                case "1":
-                    bankamtik();
-                    break;
-                case "2":
-                    System.out.println(G + "BIZI TERCIH ETTIGINIZ ICIN TESEKKUR EDERIZ");
-                    break;
-
-                default:
-                    System.out.println(G + "*******YANLIS GIRIS YAPTINIZ*******");
-                    havale();
-            }
+                switch (hislem) {
+                    case "1" -> bankamatik();
+                    case "2" -> System.out.println(G + "BIZI TERCIH ETTIGINIZ ICIN TESEKKUR EDERIZ");
+                    default -> {
+                        System.out.println(G + "*******YANLIS GIRIS YAPTINIZ*******");
+                        havale();
+                    }
+                }
 
 
         }

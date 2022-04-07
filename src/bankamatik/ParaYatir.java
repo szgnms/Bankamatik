@@ -1,6 +1,6 @@
 package bankamatik;
 
-import static bankamatik.Bankamatik.bankamtik;
+import static bankamatik.Bankamatik.bankamatik;
 import static bankamatik.ParaCekme.*;
 
 public class ParaYatir {
@@ -23,16 +23,12 @@ public class ParaYatir {
         System.out.print(G + "SECIMINIZ  : ");
         String cislem = scan.next();
         switch (cislem) {
-            case "1":
-                bankamtik();
-                break;
-            case "2":
-                System.out.println(G + "BIZI TERCIH ETTIGINIZ ICIN TESEKKUR EDERIZ");
-                break;
-
-            default:
+            case "1" -> bankamatik();
+            case "2" -> System.out.println(G + "BIZI TERCIH ETTIGINIZ ICIN TESEKKUR EDERIZ");
+            default -> {
                 System.out.println(G + "*******YANLIS GIRIS YAPTINIZ*******");
-                bankamtik();
+                bankamatik();
+            }
         }
 }
 }

@@ -23,7 +23,7 @@ public class Havale {
                     break;
                 default:
                     System.out.println(G + "*******YANLIS GIRIS YAPTINIZ*******");
-                    paraCekme();
+                    havale();
                     break;
             }
         } else {
@@ -44,8 +44,9 @@ public class Havale {
 
             System.out.println(G + " ALICI IBAN GIRINIZ : ");
             System.out.print("IBAN  :");
-            long iban = scan.nextLong();
-            System.out.println(iban + "NOLU IBAN`A " + yislem + "TUTARINDA PARA GONDERILMISTIR");
+            String iban = scan.next();
+            System.out.println("TR"+iban + "  NOLU IBAN`A " + yislem + "TUTARINDA PARA GONDERILMISTIR");
+
 
             bakiye = bakiye - yislem;
             System.out.println(R + "BAKIYE  :" + bakiye);
@@ -62,7 +63,7 @@ public class Havale {
 
                 default:
                     System.out.println(G + "*******YANLIS GIRIS YAPTINIZ*******");
-                    bankamtik();
+                    havale();
             }
 
 

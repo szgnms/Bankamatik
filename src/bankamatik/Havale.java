@@ -35,7 +35,7 @@ public class Havale {
                 havale();
             } else{
 
-                System.out.println(R + "BAKIYE  :" + bakiye);
+
 
 
             System.out.println(G + " ALICI IBAN GIRINIZ : ");

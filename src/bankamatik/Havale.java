@@ -28,7 +28,7 @@ public class Havale {
             System.out.println(R + "BAKIYE  :" + bakiye);
             System.out.println("GONDERMEK ISTEDIGINIZ TUTARI GIRINIZ");
             System.out.print(G + "GONDERILECEK TUTAR  : ");
-            int yislem = scan.nextInt();
+            double yislem = scan.nextDouble();
             if (yislem <= 0 || yislem>bakiye) {
                 System.out.println("LUTFEN GECERLI BIR TUTAR GIRINIZ");
 

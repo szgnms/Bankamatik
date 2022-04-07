@@ -15,7 +15,7 @@ public class Bankamatik {
     public static final String Y = "\u001B[33m";
     public static final String B = "\u001B[34m";
     public static Scanner scan = new Scanner(System.in);
-    public static double bakiye = 10;
+    public static double bakiye = 1000;
 
 
     public static void bankamatik() {

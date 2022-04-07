@@ -33,7 +33,7 @@ public class ParaCekme {
             System.out.println(W + "BAKIYE  :" + bakiye);
             System.out.println("CEKMEK ISTEDIGINIZ TUTARI GIRINIZ");
             System.out.print(G + "TUTAR YAZINIZ  : ");
-            int cekilen = scan.nextInt();
+            double cekilen = scan.nextDouble();
             if (cekilen > bakiye) {
                 System.out.println("HESABINIZDA GIRDIGINIZ TUTARDA BAKIYE BULUNMAMAKTADIR");
                 paraCekme();

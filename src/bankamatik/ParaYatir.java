@@ -11,7 +11,7 @@ public class ParaYatir {
         System.out.println(R + "BAKIYE  :" + bakiye);
         System.out.println("YATIRMAK ISTEDIGINIZ TUTARI GIRINIZ");
         System.out.print(G + "YATIRILACAK TUTAR  : ");
-        int yislem=scan.nextInt();
+        double yislem=scan.nextDouble();
         if (yislem<=0){
             System.out.println("LUTFEN GECERLI BIR TUTAR GIRINIZ");
 
